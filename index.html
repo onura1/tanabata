@@ -66,22 +66,20 @@
         overflow: hidden;
       }
 
-      .hero::before,
-      .hero::after {
+      .hero-decoration {
         position: absolute;
         font-size: 1.3rem;
         opacity: 0.75;
+        pointer-events: none;
       }
 
-      .hero::before {
-        content: "✦ 七夕 ✦";
+      .hero-decoration.top {
         left: 1rem;
         top: 0.8rem;
         color: var(--gold);
       }
 
-      .hero::after {
-        content: "🏮 🎋 🏮";
+      .hero-decoration.bottom {
         right: 1rem;
         bottom: 0.8rem;
       }
@@ -117,8 +115,7 @@
         backdrop-filter: blur(3px);
       }
 
-      .card::before {
-        content: "✧";
+      .card-star {
         position: absolute;
         right: 0.85rem;
         top: 0.75rem;
@@ -167,8 +164,7 @@
           padding: 2.4rem 1rem;
         }
 
-        .hero::before,
-        .hero::after {
+        .hero-decoration {
           font-size: 1rem;
         }
       }
@@ -177,12 +173,15 @@
   <body>
     <main class="wrapper">
       <header class="hero">
+        <span class="hero-decoration top" aria-hidden="true">✦ 七夕 ✦</span>
+        <span class="hero-decoration bottom" aria-hidden="true">🏮 🎋 🏮</span>
         <h1>TANABATA ANIMES UNITY</h1>
         <p class="subtitle">Anime sunucularını bir araya getiren köklü topluluk ağı</p>
       </header>
 
       <section class="section-grid" aria-label="Tanabata tanıtım içerikleri">
         <article class="card">
+          <span class="card-star" aria-hidden="true">✧</span>
           <h2>Hakkımızda</h2>
           <p>
             Tanabata Animes Unity, Türkiye’deki anime sunucularını tek bir ortak çatı altında buluşturmayı amaçlayan köklü bir topluluk yapısıdır. Amacımız sadece bir Discord sunucusu kurmak değil; anime toplulukları arasında dostluk, destek, iş birliği ve sürdürülebilir bir ağ oluşturmaktır. Geçmişten gelen tecrübemizle, sunucu sahiplerini ve topluluk yöneticilerini daha güçlü bir sistem içinde bir araya getiriyoruz.
@@ -190,6 +189,7 @@
         </article>
 
         <article class="card">
+          <span class="card-star" aria-hidden="true">✧</span>
           <h2>Özellikler</h2>
           <ul>
             <li>Anime sunucuları arasında ortak destek sistemi</li>
@@ -204,6 +204,7 @@
         </article>
 
         <article class="card">
+          <span class="card-star" aria-hidden="true">✧</span>
           <h2>Projelerimiz</h2>
           <p>
             Tanabata Animes Unity olarak sadece sohbet odaklı bir topluluk değil, gelişen bir anime ağı kurmayı hedefliyoruz. Planlanan projeler arasında otomatik partnerlik sistemi, özel bot altyapısı, sunucu sahipleri için yönetim destek sistemi, ortak etkinlik takvimi, çekiliş ve ödül organizasyonları, topluluklar arası turnuvalar, anime geceleri, sesli sohbet etkinlikleri ve ortak duyuru ağı yer alıyor.
@@ -211,6 +212,7 @@
         </article>
 
         <article class="card">
+          <span class="card-star" aria-hidden="true">✧</span>
           <h2>Ortak Ağ Sistemi</h2>
           <p>
             Ortak Ağ Sistemi, Tanabata Animes Unity’ye bağlı anime sunucularının birbirleriyle bağlantıda kalmasını sağlayan özel bir yapıdır. Bu sistem sayesinde sunucular birbirlerinin etkinliklerini duyurabilir, çekilişlerini paylaşabilir, aktiflik desteği sağlayabilir ve gerektiğinde yönetimsel konularda birbirlerine yardımcı olabilir. Amaç, sunucuları birbirine rakip yapmak değil; birlikte büyüyen güçlü bir anime topluluğu ağı oluşturmaktır.
@@ -219,6 +221,7 @@
       </section>
 
       <section class="card owner">
+        <span class="card-star" aria-hidden="true">✧</span>
         <h2>Sunucu Sahipleri İçin Özel Alan</h2>
         <p>
           Tanabata Animes Unity’ye katılan sunucu sahipleri, kendi sunucularını daha görünür hale getirme, etkinliklerini daha geniş kitlelere duyurma, partnerlik sistemlerinden yararlanma ve diğer topluluk yöneticileriyle doğrudan iletişim kurma fırsatı elde eder. Her sunucu kendi kimliğini korur; Tanabata ise bu sunucular arasında güçlü bir köprü görevi görür.
