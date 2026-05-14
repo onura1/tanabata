@@ -44,10 +44,12 @@
           radial-gradient(1px 1px at 45% 33%, rgba(255, 255, 255, 0.8), transparent),
           radial-gradient(1px 1px at 61% 77%, rgba(255, 245, 210, 0.7), transparent);
         opacity: 0.85;
-        z-index: -2;
+        z-index: 0;
       }
 
       .wrapper {
+        position: relative;
+        z-index: 1;
         width: min(1080px, 92%);
         margin: 0 auto;
         padding: 3.2rem 0 4rem;
@@ -94,19 +96,6 @@
         margin-top: 0.8rem;
         color: var(--muted);
         font-size: clamp(1rem, 2.2vw, 1.2rem);
-      }
-
-      .visually-hidden {
-        border: 0;
-        clip: rect(0 0 0 0);
-        clip-path: inset(50%);
-        height: 1px;
-        margin: -1px;
-        overflow: hidden;
-        padding: 0;
-        position: absolute;
-        width: 1px;
-        white-space: nowrap;
       }
 
       .section-grid {
@@ -188,7 +177,7 @@
         <span class="hero-decoration bottom" aria-hidden="true">🏮 🎋 🏮</span>
         <h1>TANABATA ANIMES UNITY</h1>
         <p class="subtitle">Anime sunucularını bir araya getiren köklü topluluk ağı</p>
-        <p class="visually-hidden">Tanabata, Japonya'daki Yıldız Festivali olarak bilinen geleneksel bir kutlamadır.</p>
+        <p class="subtitle">Tanabata (Yıldız Festivali) atmosferiyle modern bir anime birlik ağı.</p>
       </header>
 
       <section class="section-grid" aria-label="Tanabata tanıtım içerikleri">
