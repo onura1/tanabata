@@ -42,9 +42,7 @@
           radial-gradient(1px 1px at 12% 20%, rgba(255, 255, 255, 0.9), transparent),
           radial-gradient(1px 1px at 82% 11%, rgba(255, 245, 210, 0.85), transparent),
           radial-gradient(1px 1px at 45% 33%, rgba(255, 255, 255, 0.8), transparent),
-          radial-gradient(1px 1px at 61% 77%, rgba(255, 245, 210, 0.7), transparent),
-          radial-gradient(1px 1px at 22% 69%, rgba(255, 255, 255, 0.7), transparent),
-          radial-gradient(2px 2px at 71% 49%, rgba(255, 245, 210, 0.6), transparent);
+          radial-gradient(1px 1px at 61% 77%, rgba(255, 245, 210, 0.7), transparent);
         opacity: 0.85;
         z-index: -2;
       }
@@ -96,6 +94,19 @@
         margin-top: 0.8rem;
         color: var(--muted);
         font-size: clamp(1rem, 2.2vw, 1.2rem);
+      }
+
+      .visually-hidden {
+        border: 0;
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+        white-space: nowrap;
       }
 
       .section-grid {
@@ -177,6 +188,7 @@
         <span class="hero-decoration bottom" aria-hidden="true">🏮 🎋 🏮</span>
         <h1>TANABATA ANIMES UNITY</h1>
         <p class="subtitle">Anime sunucularını bir araya getiren köklü topluluk ağı</p>
+        <p class="visually-hidden">Tanabata, Japonya'daki Yıldız Festivali olarak bilinen geleneksel bir kutlamadır.</p>
       </header>
 
       <section class="section-grid" aria-label="Tanabata tanıtım içerikleri">
@@ -228,7 +240,9 @@
         </p>
       </section>
 
-      <footer>Köklü, güven veren, nostaljik ama modern bir anime topluluk ağı.</footer>
+      <footer aria-label="Tanabata topluluk sloganı">
+        <p>Köklü, güven veren, nostaljik ama modern bir anime topluluk ağı.</p>
+      </footer>
     </main>
   </body>
 </html>
