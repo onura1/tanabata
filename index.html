@@ -1,41 +1,231 @@
-<section class="section stats-section">
-  <div class="section-header">
-    <span class="section-kicker">Topluluk Gücü</span>
-    <h2>Birlikte daha güçlüyüz</h2>
-  </div>
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tanabata Animes Unity</title>
+    <style>
+      :root {
+        --bg-1: #060b1f;
+        --bg-2: #1a1340;
+        --bg-3: #2a123a;
+        --gold: #e8c06d;
+        --gold-soft: rgba(232, 192, 109, 0.45);
+        --text: #f6f2ff;
+        --muted: #d3cbe8;
+        --card: rgba(8, 10, 26, 0.62);
+        --accent-red: #d56973;
+      }
 
-  <div class="grid cards">
-    <article class="card">
-      <h3>2021</h3>
-      <p>Tanabata Animes Unity’nin temellerinin atıldığı dönem.</p>
-    </article>
+      * {
+        box-sizing: border-box;
+      }
 
-    <article class="card">
-      <h3>2022 - 2023</h3>
-      <p>Topluluğun en aktif ve en çok tanındığı dönem.</p>
-    </article>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Inter, system-ui, -apple-system, sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 20% 20%, rgba(214, 105, 115, 0.12), transparent 36%),
+          radial-gradient(circle at 80% 0%, rgba(90, 70, 190, 0.24), transparent 42%),
+          linear-gradient(160deg, var(--bg-1), var(--bg-2) 55%, var(--bg-3));
+        min-height: 100vh;
+        line-height: 1.7;
+      }
 
-    <article class="card">
-      <h3>Unity</h3>
-      <p>Anime sunucularını aynı gökyüzü altında birleştiren yapı.</p>
-    </article>
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        background-image:
+          radial-gradient(1px 1px at 12% 20%, rgba(255, 255, 255, 0.9), transparent),
+          radial-gradient(1px 1px at 82% 11%, rgba(255, 245, 210, 0.85), transparent),
+          radial-gradient(1px 1px at 45% 33%, rgba(255, 255, 255, 0.8), transparent),
+          radial-gradient(1px 1px at 61% 77%, rgba(255, 245, 210, 0.7), transparent),
+          radial-gradient(1px 1px at 22% 69%, rgba(255, 255, 255, 0.7), transparent),
+          radial-gradient(2px 2px at 71% 49%, rgba(255, 245, 210, 0.6), transparent);
+        opacity: 0.85;
+        z-index: -2;
+      }
 
-    <article class="card">
-      <h3>Geri Dönüş</h3>
-      <p>Daha güçlü sistemler, daha sağlam kadro ve daha büyük hedeflerle.</p>
-    </article>
-  </div>
-</section>
+      .wrapper {
+        width: min(1080px, 92%);
+        margin: 0 auto;
+        padding: 3.2rem 0 4rem;
+      }
 
-<section class="section comeback-section">
-  <div class="section-header">
-    <span class="section-kicker">Yeniden Doğuş</span>
-    <h2>Tanabata Animes Unity geri dönüyor</h2>
-  </div>
+      .hero {
+        position: relative;
+        padding: 3.2rem 1.8rem;
+        border: 1px solid var(--gold-soft);
+        border-radius: 1.2rem;
+        background: linear-gradient(145deg, rgba(10, 14, 34, 0.72), rgba(16, 11, 35, 0.68));
+        box-shadow: 0 20px 35px rgba(0, 0, 0, 0.35), inset 0 0 45px rgba(232, 192, 109, 0.05);
+        text-align: center;
+        overflow: hidden;
+      }
 
-  <div class="quote-box">
-    Bazı topluluklar zamanla unutulur.  
-    Bazıları ise geri döndüğünde gökyüzü yeniden parlar.  
-    Tanabata Animes Unity, eski gücünü yeni hedeflerle birleştirerek yeniden yükseliyor.
-  </div>
-</section>
+      .hero::before,
+      .hero::after {
+        position: absolute;
+        font-size: 1.3rem;
+        opacity: 0.75;
+      }
+
+      .hero::before {
+        content: "✦ 七夕 ✦";
+        left: 1rem;
+        top: 0.8rem;
+        color: var(--gold);
+      }
+
+      .hero::after {
+        content: "🏮 🎋 🏮";
+        right: 1rem;
+        bottom: 0.8rem;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2rem, 5.2vw, 3.3rem);
+        letter-spacing: 0.08em;
+        color: #fff8df;
+        text-shadow: 0 0 22px rgba(232, 192, 109, 0.24);
+      }
+
+      .subtitle {
+        margin-top: 0.8rem;
+        color: var(--muted);
+        font-size: clamp(1rem, 2.2vw, 1.2rem);
+      }
+
+      .section-grid {
+        margin-top: 1.8rem;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid rgba(232, 192, 109, 0.4);
+        border-radius: 1rem;
+        padding: 1.2rem 1.1rem;
+        position: relative;
+        box-shadow: inset 0 0 20px rgba(232, 192, 109, 0.04), 0 10px 22px rgba(0, 0, 0, 0.24);
+        backdrop-filter: blur(3px);
+      }
+
+      .card::before {
+        content: "✧";
+        position: absolute;
+        right: 0.85rem;
+        top: 0.75rem;
+        color: var(--gold);
+        opacity: 0.75;
+      }
+
+      h2 {
+        margin: 0 0 0.65rem;
+        font-size: 1.18rem;
+        color: #ffe9ae;
+      }
+
+      p,
+      li {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.98rem;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 1.15rem;
+        display: grid;
+        gap: 0.4rem;
+      }
+
+      .owner {
+        margin-top: 1rem;
+        border-left: 3px solid var(--accent-red);
+      }
+
+      footer {
+        margin-top: 1.6rem;
+        text-align: center;
+        color: rgba(255, 244, 215, 0.75);
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 720px) {
+        .wrapper {
+          padding-top: 1.5rem;
+        }
+
+        .hero {
+          padding: 2.4rem 1rem;
+        }
+
+        .hero::before,
+        .hero::after {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrapper">
+      <header class="hero">
+        <h1>TANABATA ANIMES UNITY</h1>
+        <p class="subtitle">Anime sunucularını bir araya getiren köklü topluluk ağı</p>
+      </header>
+
+      <section class="section-grid" aria-label="Tanabata tanıtım içerikleri">
+        <article class="card">
+          <h2>Hakkımızda</h2>
+          <p>
+            Tanabata Animes Unity, Türkiye’deki anime sunucularını tek bir ortak çatı altında buluşturmayı amaçlayan köklü bir topluluk yapısıdır. Amacımız sadece bir Discord sunucusu kurmak değil; anime toplulukları arasında dostluk, destek, iş birliği ve sürdürülebilir bir ağ oluşturmaktır. Geçmişten gelen tecrübemizle, sunucu sahiplerini ve topluluk yöneticilerini daha güçlü bir sistem içinde bir araya getiriyoruz.
+          </p>
+        </article>
+
+        <article class="card">
+          <h2>Özellikler</h2>
+          <ul>
+            <li>Anime sunucuları arasında ortak destek sistemi</li>
+            <li>Etkinlik ve çekiliş duyurularının ortak ağda paylaşılması</li>
+            <li>Sunucu sahipleri için özel iletişim ve iş birliği alanı</li>
+            <li>Ortak partnerlik ve tanıtım sistemi</li>
+            <li>Güvenlik, kural ihlali ve sorunlu kullanıcılar için bilgi paylaşımı</li>
+            <li>Topluluklar arası dostluk ve aktiflik desteği</li>
+            <li>Özel bot sistemleri ve otomasyon altyapısı</li>
+            <li>Yayıncılar, etkinlik ekipleri ve topluluk projeleriyle iş birliği</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>Projelerimiz</h2>
+          <p>
+            Tanabata Animes Unity olarak sadece sohbet odaklı bir topluluk değil, gelişen bir anime ağı kurmayı hedefliyoruz. Planlanan projeler arasında otomatik partnerlik sistemi, özel bot altyapısı, sunucu sahipleri için yönetim destek sistemi, ortak etkinlik takvimi, çekiliş ve ödül organizasyonları, topluluklar arası turnuvalar, anime geceleri, sesli sohbet etkinlikleri ve ortak duyuru ağı yer alıyor.
+          </p>
+        </article>
+
+        <article class="card">
+          <h2>Ortak Ağ Sistemi</h2>
+          <p>
+            Ortak Ağ Sistemi, Tanabata Animes Unity’ye bağlı anime sunucularının birbirleriyle bağlantıda kalmasını sağlayan özel bir yapıdır. Bu sistem sayesinde sunucular birbirlerinin etkinliklerini duyurabilir, çekilişlerini paylaşabilir, aktiflik desteği sağlayabilir ve gerektiğinde yönetimsel konularda birbirlerine yardımcı olabilir. Amaç, sunucuları birbirine rakip yapmak değil; birlikte büyüyen güçlü bir anime topluluğu ağı oluşturmaktır.
+          </p>
+        </article>
+      </section>
+
+      <section class="card owner">
+        <h2>Sunucu Sahipleri İçin Özel Alan</h2>
+        <p>
+          Tanabata Animes Unity’ye katılan sunucu sahipleri, kendi sunucularını daha görünür hale getirme, etkinliklerini daha geniş kitlelere duyurma, partnerlik sistemlerinden yararlanma ve diğer topluluk yöneticileriyle doğrudan iletişim kurma fırsatı elde eder. Her sunucu kendi kimliğini korur; Tanabata ise bu sunucular arasında güçlü bir köprü görevi görür.
+        </p>
+      </section>
+
+      <footer>Köklü, güven veren, nostaljik ama modern bir anime topluluk ağı.</footer>
+    </main>
+  </body>
+</html>
